@@ -1,9 +1,12 @@
+# Custom YOLO4RTM for heading detection 
+
+The code for the implementation of “[Yolov5-obb-psc](https://github.com/yuyi1005/yolov5-obb-psc) + Custom Heading Detection”
+
 # Yolov5 for Oriented Object Detection
 ![图片](./docs/detection.png)
 ![train_batch0.jpg](./docs/train_batch6.jpg)
 ![results.png](./docs/results.png)
 
-The code for the implementation of “[Yolov5](https://github.com/ultralytics/yolov5) + [Circular Smooth Label](https://arxiv.org/abs/2003.05597v2)”. 
 
 # Results and Models
 The results on **DOTA_subsize1024_gap200_rate1.0** test-dev set are shown in the table below. (**password: yolo**)
