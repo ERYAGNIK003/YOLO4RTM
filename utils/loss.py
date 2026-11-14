@@ -604,12 +604,12 @@ class ComputeLoss:
                 lbox += rgloss.mean()
                 
                 # coordinate stabilizer
-                lbox += 0.25 * nn.SmoothL1Loss(beta=0.11)(pxywh, txywh) #Don't use theta_box for l1 loss because of angle discontinuity at boundary
+                lbox += 0.10 * nn.SmoothL1Loss(beta=0.11)(pxywh, txywh) #Don't use theta_box for l1 loss because of angle discontinuity at boundary
 
                 # better theta loss
                 angle_diff = torch.atan2(torch.sin(ptheta_box - ttheta_box),torch.cos(ptheta_box - ttheta_box))
                 theta_box_penalty= (1 - torch.cos(angle_diff)) / 2.0
-                lbox += 0.25 * theta_box_penalty.mean()
+                lbox += 0.05 * theta_box_penalty.mean()
                 
                 
                 # Objectness
