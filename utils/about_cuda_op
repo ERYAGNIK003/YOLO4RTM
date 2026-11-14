@@ -1,0 +1,4 @@
+Downloaded cuda_op from https://github.com/lilanxiao/Rotated_IoU/tree/master
+
+cd cuda_op
+python setup.py install

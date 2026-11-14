@@ -1,0 +1,3 @@
+Results saved to runs/detect/exp
+(yolov5_obb) seas@seas-HP-Z8-G4-Workstation:~/YOLOv5OBB_github/yolov5_obb$ python Frmwise_Detection_YOLO4RTM_MSR.py --weights runs/train/yolo_e100_scratch_hyp_lessaug_l_bcd/weights/best.pt --agnostic-nms --device 0 --source DJI_0033.MP4 --save-single
+

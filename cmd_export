@@ -1,0 +1,1 @@
+python export.py --weights runs/train/yolo_e100_scratch_hyp_lessaug_n_ablation_kld/weights/best.pt --include onnx --device 0 
