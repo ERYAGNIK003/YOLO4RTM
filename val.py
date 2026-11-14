@@ -326,18 +326,6 @@ def run(data,
                 h_pred = h_pred / (h_pred.norm(dim=1, keepdim=True) + 1e-6)
                 h_gt   = h_gt / (h_gt.norm(dim=1, keepdim=True) + 1e-6)
 
-                #previously used changed in 31_10_2026
-                '''
-                # cosine similarity
-                cos_sim = (h_pred * h_gt).sum(dim=1)
-                cos_sim_scaled = (cos_sim + 1)/2
-
-                # accumulate
-                heading_cos_sum += cos_sim_scaled.sum().item()
-                heading_count += cos_sim_scaled.shape[0]
-                '''
-                
-                ######Newly added on 31_10_2026
                 
                 # Convert hx, hy into heading angles [0, 360)
                 pred_angle = torch.rad2deg(
@@ -353,11 +341,6 @@ def run(data,
                     angular_error,
                     360.0 - angular_error
                 )
-                ##################
-                
-                #######MAE
-                
-                ################
                 
                 # Accumulate angular errors
                 #angular_error.sum().item() #Use for MAE
